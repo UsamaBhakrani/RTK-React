@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addTodo } from "../slices/todoSlice";
 
 const AddToDo = () => {
@@ -13,11 +13,9 @@ const AddToDo = () => {
 
   return (
     <form onSubmit={handleOnSubmit}>
-      <label htmlFor="todo" id="todo">
-        Add Todo
-      </label>
+      <label id="todo">Add Todo</label>
       <input type="text" id="todo" onChange={(e) => setInput(e.target.value)} />
-      <button>Submit</button>
+      <button type="submit">Submit</button>
     </form>
   );
 };
