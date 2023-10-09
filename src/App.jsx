@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import AddToDo from "./components/AddToDo";
 
 const App = () => {
   return (
-    <div>App</div>
-  )
-}
+    <div>
+      <AddToDo />
+    </div>
+  );
+};
 
-export default App
+export default App;
