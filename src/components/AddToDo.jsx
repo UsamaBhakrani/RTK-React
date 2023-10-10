@@ -9,12 +9,18 @@ const AddToDo = () => {
   const handleOnSubmit = (e) => {
     e.preventDefault();
     dispatch(addTodo(input));
+    setInput("");
   };
 
   return (
     <form onSubmit={handleOnSubmit}>
       <label id="todo">Add Todo</label>
-      <input type="text" id="todo" onChange={(e) => setInput(e.target.value)} />
+      <input
+        value={input}
+        type="text"
+        id="todo"
+        onChange={(e) => setInput(e.target.value)}
+      />
       <button type="submit">Submit</button>
     </form>
   );
